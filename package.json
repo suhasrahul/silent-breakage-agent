@@ -1,0 +1,13 @@
+{
+  "name": "silent-breakage-agent",
+  "version": "1.0.0",
+  "description": "Finds accessibility regressions caused by dependency updates",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axe-core": "^4.10.2"
+  }
+}

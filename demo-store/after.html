@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout | Side B Records</title>
+<style>
+  :root {
+    --ink: #1E2433;
+    --paper: #FFFFFF;
+    --wash: #F1F2F5;
+    --line: #D5D8DF;
+    --cobalt: #2F5BEA;
+    --groove: #14161C;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--wash);
+    color: var(--ink);
+    font: 16px/1.6 "Avenir Next", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  header {
+    background: var(--groove);
+    color: #FFFFFF;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 20px; letter-spacing: -0.01em; }
+  .record {
+    width: 34px; height: 34px; border-radius: 50%;
+    background: repeating-radial-gradient(circle, #2A2E38 0 2px, #14161C 2px 4px);
+    position: relative;
+  }
+  .record::after {
+    content: ""; position: absolute; inset: 12px; border-radius: 50%; background: var(--cobalt);
+  }
+  .g-icon-link { color: #FFFFFF; display: inline-flex; padding: 8px; border-radius: 6px; }
+  main { max-width: 920px; margin: 0 auto; padding: 32px 20px 60px; }
+  h1 { font-size: 34px; line-height: 1.15; margin: 0 0 24px; letter-spacing: -0.02em; }
+  h2 { font-size: 19px; margin: 0 0 14px; }
+  .grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 24px; }
+  @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+  section { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 22px; }
+  .item { display: flex; align-items: center; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .item:last-of-type { border-bottom: 0; }
+  .g-cover { border-radius: 4px; flex: none; }
+  .item-info { flex: 1; }
+  .item-info strong { display: block; }
+  .item-info span { font-size: 14px; }
+  .price { font-variant-numeric: tabular-nums; font-weight: 600; }
+  .g-icon-btn {
+    border: 1px solid var(--line); background: var(--paper); color: var(--ink);
+    width: 36px; height: 36px; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
+  }
+  .g-field { display: flex; flex-direction: column; gap: 4px; margin-bottom: 14px; }
+  .g-field label, .g-field-label { font-size: 14px; font-weight: 600; }
+  .g-field input { font: inherit; padding: 10px 12px; border: 1px solid #8A8F9C; border-radius: 6px; }
+  .g-note { font-size: 14px; margin: 6px 0 0; }
+  .total { display: flex; justify-content: space-between; font-size: 18px; font-weight: 700; margin-top: 16px; }
+  .pay {
+    width: 100%; margin-top: 18px; padding: 14px; border: 0; border-radius: 8px;
+    background: var(--cobalt); color: #FFFFFF; font: inherit; font-weight: 700; cursor: pointer;
+  }
+  :focus-visible { outline: 3px solid var(--cobalt); outline-offset: 2px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><span class="record" aria-hidden="true"></span>Side B Records</div>
+  <div data-g="iconLink" data-props='{"href":"#wishlist","label":"Your wishlist","icon":"M12 20s-7-4.4-9.2-8.8A5 5 0 0112 6a5 5 0 019.2 5.2C19 15.6 12 20 12 20z"}'></div>
+</header>
+
+<main>
+  <h1>Checkout</h1>
+  <div class="grid">
+    <section aria-labelledby="cart-heading">
+      <h2 id="cart-heading">Your cart</h2>
+
+      <div class="item">
+        <div data-g="cover" data-props='{"src":"data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 88 88%27%3E%3Crect width=%2788%27 height=%2788%27 fill=%27%232F5BEA%27/%3E%3Ccircle cx=%2744%27 cy=%2744%27 r=%2730%27 fill=%27%2314161C%27/%3E%3Ccircle cx=%2744%27 cy=%2744%27 r=%278%27 fill=%27%23F5C542%27/%3E%3C/svg%3E","alt":"Album cover for Night Transit by Low Tide Radio"}'></div>
+        <div class="item-info">
+          <strong>Night Transit</strong>
+          <span>Low Tide Radio, 12-inch vinyl</span>
+        </div>
+        <span class="price">$28.00</span>
+        <div data-g="iconButton" data-props='{"label":"Remove Night Transit from cart","icon":"M5 7h14M10 7V4h4v3M7 7l1 13h8l1-13"}'></div>
+      </div>
+
+      <div class="item">
+        <div data-g="cover" data-props='{"src":"data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 88 88%27%3E%3Crect width=%2788%27 height=%2788%27 fill=%27%23E4572E%27/%3E%3Crect x=%2716%27 y=%2716%27 width=%2756%27 height=%2756%27 fill=%27%23FFFFFF%27/%3E%3Ccircle cx=%2744%27 cy=%2744%27 r=%2714%27 fill=%27%231E2433%27/%3E%3C/svg%3E","alt":"Album cover for Paper Suns by The Quiet Hours"}'></div>
+        <div class="item-info">
+          <strong>Paper Suns</strong>
+          <span>The Quiet Hours, cassette</span>
+        </div>
+        <span class="price">$14.00</span>
+        <div data-g="iconButton" data-props='{"label":"Remove Paper Suns from cart","icon":"M5 7h14M10 7V4h4v3M7 7l1 13h8l1-13"}'></div>
+      </div>
+
+      <div class="total"><span>Total</span><span class="price">$42.00</span></div>
+    </section>
+
+    <section aria-labelledby="ship-heading">
+      <h2 id="ship-heading">Shipping details</h2>
+      <div data-g="textField" data-props='{"id":"name","label":"Full name","autocomplete":"name"}'></div>
+      <div data-g="textField" data-props='{"id":"email","label":"Email address","type":"email","autocomplete":"email"}'></div>
+      <div data-g="textField" data-props='{"id":"address","label":"Street address","autocomplete":"street-address"}'></div>
+      <div data-g="note" data-props='{"text":"Records ship in sturdy mailers within 2 business days."}'></div>
+      <button class="pay" type="button">Pay $42.00</button>
+    </section>
+  </div>
+</main>
+
+<script src="lib/groove-ui-2.0.0.js"></script>
+<script>GrooveUI.mount();</script>
+</body>
+</html>
